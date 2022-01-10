@@ -11,10 +11,10 @@ $bdd = new PDO('mysql:host=localhost;dbname=livreor', 'root', '');
 if (isset($_POST['submit'])) {
 
     $login = htmlspecialchars($_POST['login']);
-    $password = htmlspecialchars($_POST['password']);
-    $password2 = htmlspecialchars($_POST['password2']);
+    $password = sha1($_POST['password']);
+    $password2 = sha1($_POST['password2']);
 
-    if (!empty($_POST['login'])  and !empty($_POST['password']) and !empty($_POST['password2'])) {
+    if (!empty($_POST['login'])  && !empty($_POST['password']) && !empty($_POST['password2'])) {
 
 
         // on vérifie si la taille de la string est inférieur à 255 charactères
@@ -24,8 +24,8 @@ if (isset($_POST['submit'])) {
 
 
             // vérifier si l'identifiant existe déjà.
-            $reqlogin = $bdd->prepare("SELECT * FROM utilisateurs WHERE login = ? ");
-            $reqlogin->execute(array($login));
+            $reqlogin = $bdd->prepare("SELECT * FROM utilisateurs WHERE login = :login ");
+            $reqlogin->execute(['login' => $login]);
             $loginexist = $reqlogin->rowCount();
 
             if ($loginexist == 0) {
@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire</title>
-    <link rel="stylesheet" type="text/css" href="/CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="/livre-or/CSS/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">

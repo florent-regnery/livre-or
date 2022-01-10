@@ -9,11 +9,12 @@ if (isset($_SESSION['id'])) {
 	header('Location: home_utilisateurs.php');
 }
 
+
 $bdd = new PDO('mysql:host=localhost;dbname=livreor', 'root', '');
 $bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 if (isset($_POST['connexion'])) {
 	$loginconnect = htmlspecialchars($_POST['loginconnect']);
-	$passwordconnect = htmlspecialchars($_POST['passwordconnect']);
+	$passwordconnect = sha1($_POST['passwordconnect']);
 
 	if (!empty($loginconnect) && !empty($passwordconnect)) {
 		$requser = $bdd->prepare("SELECT id FROM utilisateurs WHERE login = :login AND password = :password");
@@ -43,7 +44,7 @@ if (isset($_POST['connexion'])) {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Connexion</title>
-	<link rel="stylesheet" type="text/css" href="/CSS/style.css " />
+	<link rel="stylesheet" type="text/css" href="/livre-or/CSS/style.css " />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
@@ -70,17 +71,6 @@ if (isset($_POST['connexion'])) {
 					<input class=" bouton " type="submit" name="connexion" value="Se connecter" />
 				</p>
 			</fieldset>
-		</form>
-		<form method="POST">
-			<div class="mb-3">
-				<label for="exampleInputLogin1" class="form-label">Identifiant</label>
-				<input type="login" name="loginconnect" class="form-control" id="exampleInputLogin1" aria-describedby="loginHelp">
-			</div>
-			<div class="mb-3">
-				<label for="exampleInputPassword1" class="form-label">Mot de Passe</label>
-				<input type="password" name="passwordconnect" class="form-control" id="exampleInputPassword1">
-			</div>
-			<button type="submit" class="identifier">S'identifier</button>
 		</form>
 		<?php if (isset($erreur)) : ?>
 			<br />

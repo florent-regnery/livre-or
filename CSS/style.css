@@ -1,51 +1,74 @@
+header{ 
+    background-color: #f3dfc1;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-size: large;
+}
 
-
-.mb-3{
-    padding: 1.5rem;
-    margin-right: 0;
-    margin-left: 0;
-    border-width: 1px;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url(/livre-or/images/livre.3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0%;
 }
-.mb-3 {
-    position: relative;
-    padding: 1rem;
-    margin: 1rem -.75rem 0;
-    margin-right: -0.75rem;
-    margin-left: -0.75rem;
-    border: solid #dee2e6;
-    border-top-width: medium;
-    border-right-width: medium;
-    border-bottom-width: medium;
-    border-left-width: medium;
-    border-width: 1px 0 0;
-}
-.form-label {
-    margin-bottom: .5rem;
-}
-label {
-    display: inline-block;
-}
-.form-control {
-    display: block;
+footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    font-family: 'Unbuntu', sans-serif;
+    bottom: 0;
     width: 100%;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    height: 60px;
+    background-color:#ddbea8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-button, input {
-    margin: 0;
-    font-size: inherit;
-    line-height: inherit;
+
+.main-box{ display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inscription,.git,.livre{
+
+    text-decoration: none;
+}
+.livre{
+    color: white;
+}
+.livre:hover{
+    color: #C2847A;
+}
+
+.inscription{
+    color: #C2847A;
+}
+
+.connexion{
+    color:#C2847A;
+    font-size: 120%;
+}
+.git{
+    color: #C2847A;
+    font-size: 130%;
+    border: 2px solid #C2847A;
+}
+.git:hover{
+    color : #f3dfc1;
+    border : #f3dfc1;
+}
+
+.inscription:hover,.connexion:hover{
+    color: #f3dfc1;
+    }
+
