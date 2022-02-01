@@ -1,4 +1,5 @@
 <?php
+session_start();
 // l'utilisateur c'est connecté, on sait qu'il a une variable de session
 // si on voit dans la session que la clé id existe alors je redirige l'utilsateur vers profil.php
 // sinon j'affiche mon formulaire
@@ -35,9 +36,9 @@ ob_start();
 ?>
 
 <div align="center">
-	<br />
+	<br/>
 	<h1>Connexion</h1>
-	<br />
+	<br/>
 	<form method="POST" action="" class="form">
 		<fieldset class="field">
 			<input type="login" name="loginconnect" placeholder="Identifiant.." />

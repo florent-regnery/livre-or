@@ -1,15 +1,16 @@
 <?php
-$title = "Accueil utilisateur";
+session_start();
+$title = 'Accueil utilisateur';
 ob_start();
 ?>
 <div class="main-box">
     <div class="lien">
-        <br/>
+        <br />
         <a href="https://github.com/florent-regnery/livre-or" class="git">Lien github</a>
     </div>
-    <br/>
+    <br />
     <a href="/livre-or/profil.php" class="inscription">Editer le profil</a>
-    <br/>
+    <br />
     <a href="/livre-or/commentaire.php" class="inscription">Laissez un commentaire</a>
 </div>
 

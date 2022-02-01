@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // On se connecte à la base de donnée et on vérifie la session de l'utilisateur
 // Ensuite on créer des variables afin d'executer notre requete
 // Vérifier les nouvelles informations envoyé par l'utilisateur afin de modifier ses données

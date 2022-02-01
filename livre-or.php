@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $title = 'Livre d\'or';
 require_once 'db.php';
 $query = "SELECT c.commentaire, c.date, u.login  FROM commentaires AS c 

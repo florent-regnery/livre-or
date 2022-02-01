@@ -8,14 +8,17 @@ header{
     justify-content: space-evenly;
     color:white;
     font-size: large;
+    flex-wrap: wrap;
 }
 body{
     font-family: 'Ubuntu', sans-serif;
+    margin: 0%;
+}
+body > div {
     background-image: url(/livre-or/images/livre.3.png);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0%;
-    height : calc(100%+60px);
+    height: calc(100vh - 160px);
 }
 footer {
     position: fixed;
@@ -73,8 +76,7 @@ li{ list-style-type: none;
     border: 2px solid #C2847A;
 }
 .git:hover{
-    color : #f3dfc1;
-    border : #f3dfc1;
+    color : #c5ac1b;
 }
 .inscription:hover,.connexion:hover{
     color: #1B5299;
@@ -103,4 +105,27 @@ input{
     padding: 0;
     border: 0;
     outline:0;
+}
+
+
+.menu-link {
+    display: flex;
+    justify-content: space-around;
+    flex: 2;
+}
+
+@media screen and (max-width: 720px) {
+    header > p{ 
+        flex: 100%;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 520px) {
+    .menu-link { 
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu-link li { 
+        padding: 10px;
+    }
 }

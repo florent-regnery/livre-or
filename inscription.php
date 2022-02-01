@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = 'Inscription';
 
 // Si l'utilistauer est inscrit dans la base de donnée le rediriger vers la page home

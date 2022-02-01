@@ -1,9 +1,16 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <?php if (isset($_SESSION['id'])) : ?>
-    Vous êtes connecté
-     <a href="index.php" class="href">Accueil</a>
-     <a href="livre-or.php" class="href">Livre dor</a>
-     <a href="home_utilisateurs.php" class="inscription">Page Utilisateur</a>
-     <a href="deconnexion.php" class="connexion">Déconnexion</a>
+    <p>Vous êtes connecté</p>
+    <ul class="menu-link">
+        <li><a href="index.php" class="href">Accueil</a></li>
+        <li><a href="livre-or.php" class="href">Livre dor</a></li>
+        <li><a href="home_utilisateurs.php" class="inscription">Page Utilisateur</a></li>
+        <li><a href="deconnexion.php" class="connexion">Déconnexion</a></li>
+    </ul>
 <?php else : ?>
     <a href="index.php" class="href">Accueil</a>
     <a href="livre-or.php" class="href">Livre d'or</a>

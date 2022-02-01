@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Nous verrifions si l'utilisateur à envoyé son commentaire et remplis le champ
 // Si il est remplis et envoyé alors nous nous connectons à la base de donnée et nous procedons à la requete
 // Si le commentaire est bien ajouté, afficher la confirmation sinon afficher l'erreur
@@ -28,7 +29,7 @@ if (isset($_POST['message'])) {
 }
 ob_start();
 ?>
-<div class="box">
+<div class="main-box">
     <h1>Livre d'or</h1>
     <div class="form">
         <form method="POST">
