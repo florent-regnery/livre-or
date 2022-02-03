@@ -3,6 +3,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 ?>
+ <!-- on verif' si l'utilisateur est connecté dans ce cas on lui affiche des options différentes -->
 <?php if (isset($_SESSION['id'])) : ?>
     <p>Vous êtes connecté</p>
     <ul class="menu-link">

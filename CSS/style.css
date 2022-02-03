@@ -46,7 +46,7 @@ footer {
     align-items: center;
 }
 
-/* Liens */
+    /* Liens */
 
 .inscription,.git,.href,.connexion{
 
@@ -82,7 +82,11 @@ li{ list-style-type: none;
     color: #1B5299;
 }
 
-/* Formulaire */
+h1{
+    font-size: 200%;
+}
+
+    /* Formulaire */
 
 .form{
     width: 30%;
@@ -99,7 +103,7 @@ input{
     text-align: center;
     cursor: pointer;
     font-size: 19px;
-    width: 100%;
+    width: 61%;
     height: 51px;
     color: #fff;
     padding: 0;
@@ -113,6 +117,21 @@ input{
     justify-content: space-around;
     flex: 2;
 }
+
+.formcom{ display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.commentaire{
+    display: flex;
+    align-items: center;
+}
+.sendcom{
+    display: flex;
+    justify-content: center;
+}
+/* responsiv */
 
 @media screen and (max-width: 720px) {
     header > p{ 

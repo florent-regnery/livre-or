@@ -3,6 +3,7 @@ session_start();
 
 $title = 'Livre d\'or';
 require_once 'db.php';
+// On prépare notre requete on joint deux tableaux de la base de donnée
 $query = "SELECT c.commentaire, c.date, u.login  FROM commentaires AS c 
 INNER JOIN utilisateurs AS u ON u.id = c.id_utilisateur
 ORDER BY c.date DESC";
@@ -15,13 +16,16 @@ $commentaires = $statement->fetchAll();
     <ul>
         <?php foreach ($commentaires as $key => $commentaire) : ?>
             <li>
-                <p class="text"><?= $commentaire['commentaire'] ?></p>
+                <p class="text"><textarea name="message" rows="05px" cols="20px"><?= $commentaire['commentaire'] ?></textarea></p>
+                <br />
                 <p class="text">Publié par <?= $commentaire['login'] ?> le <?= $commentaire['date'] ?></p>
+                <br />
             </li>
         <?php endforeach; ?>
     </ul>
     <?php if (isset($_SESSION['id'])) : ?>
-        <a href="/livre-or/commentaire.php" class="href">Ajouter un Commentaire</a>
+
+        <a href="/livre-or/commentaire.php" class="href"></br />Ajouter un Commentaire</a>
     <?php endif; ?>
 </div>
 <?php

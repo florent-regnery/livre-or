@@ -31,23 +31,19 @@ ob_start();
 ?>
 <div class="main-box">
     <h1>Livre d'or</h1>
-    <div class="form">
+    <div class="formcom">
         <form method="POST">
             <fieldset>
                 <table class="commentaire">
                     <tr>
                         <td>
-                            <label>Entrez Votre Message..<br /></label>
-                        </td>
-                        <br />
-                        <td>
                             <textarea name="message" rows="25px" cols="50px"></textarea>
                         </td>
                     </tr>
                 </table>
-                <p>
+                <p class="sendcom">
                     <br />
-                    <input class="bouton" type="submit" value="Envoyer" />
+                    <input class="bouton" type="submit" value="Envoyez votre commentaire" />
                 </p>
             </fieldset>
         </form>

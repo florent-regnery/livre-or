@@ -3,7 +3,7 @@ session_start();
 $title = 'Accueil utilisateur';
 ob_start();
 ?>
-<div class="main-box">
+<div class="box">
     <div class="lien">
         <br />
         <a href="https://github.com/florent-regnery/livre-or" class="git">Lien github</a>

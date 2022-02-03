@@ -1,4 +1,3 @@
-<!-- Nous vérifions si la session de l'utilisateur existe, afin de le rediriger -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
 </head>
+
+<!-- On garde le header et le footer car on utilise le même -->
 
 <body>
     <header>

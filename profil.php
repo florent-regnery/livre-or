@@ -34,7 +34,6 @@ if (isset($_SESSION['id'])) {
 ob_start();
 ?>
 <div align="center">
-	<h1>Edition de mon profil</h1>
 	<div align="center">
 		<br />
 		<h1>Profil de <?= @$user['login']; ?></h1>

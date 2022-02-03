@@ -1,7 +1,7 @@
 <?php
 session_start();
-// l'utilisateur c'est connecté, on sait qu'il a une variable de session
-// si on voit dans la session que la clé id existe alors je redirige l'utilsateur vers profil.php
+// On démarre la session voir si l'utilisateur est connecté
+// si on voit dans la session que la clé id existe alors je redirige l'utilsateur vers home.php
 // sinon j'affiche mon formulaire
 $title = 'Connexion';
 
@@ -36,9 +36,9 @@ ob_start();
 ?>
 
 <div align="center">
-	<br/>
+	<br />
 	<h1>Connexion</h1>
-	<br/>
+	<br />
 	<form method="POST" action="" class="form">
 		<fieldset class="field">
 			<input type="login" name="loginconnect" placeholder="Identifiant.." />
@@ -46,6 +46,7 @@ ob_start();
 			<input type="password" name="passwordconnect" placeholder="Mot de passe.." />
 			<br /><br />
 			<input class=" bouton " type="submit" name="connexion" value="Se connecter" />
+			<p><br />Vous n'avez pas de compte ? <a href="inscription.php">Inscrivez-vous</a>
 		</fieldset>
 	</form>
 	<?php if (isset($erreur)) : ?>
