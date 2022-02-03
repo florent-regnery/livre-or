@@ -5,10 +5,6 @@ session_start();
 // sinon j'affiche mon formulaire
 $title = 'Connexion';
 
-if (isset($_SESSION['id'])) {
-	header('Location: home_utilisateurs.php');
-}
-
 if (isset($_POST['connexion'])) {
 	$loginconnect = htmlspecialchars($_POST['loginconnect']);
 	$passwordconnect = sha1($_POST['passwordconnect']);
