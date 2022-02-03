@@ -2,7 +2,7 @@
 session_start();
 // On démarre la session voir si l'utilisateur est connecté
 // si on voit dans la session que la clé id existe alors je redirige l'utilsateur vers home.php
-// sinon j'affiche mon formulaire
+// sinon j'affiche mon formulaire.
 $title = 'Connexion';
 
 if (isset($_POST['connexion'])) {
